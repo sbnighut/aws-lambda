@@ -14,7 +14,6 @@ sls invoke -f hello -l
 **Only deploy function and not the stack:**
 sls deploy function -f hello
 
-
 **Check continuous logs :**
 sls logs -f hello -l 
 
