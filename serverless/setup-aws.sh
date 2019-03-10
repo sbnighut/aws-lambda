@@ -1,6 +1,6 @@
 npm install -g serverless
 
-serverless config credentials --provider aws --key AKIAIPZ6KY3Y4GS4ASUQ --secret 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 --profile serverless-admin
+serverless config credentials --provider aws --key "key" --secret "secret" --profile lambda-admin
 
 **Create and deploy lambda function from command line:**
 sls create --template aws-python --path hello-world-python

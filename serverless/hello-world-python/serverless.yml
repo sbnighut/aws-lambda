@@ -20,7 +20,7 @@ service: hello-world-python # NOTE: update this with your service name
 provider:
   name: aws
   runtime: python2.7
-  profile: serverless-admin
+  profile: lambda-admin
   region: us-east-1
 
 # you can overwrite defaults here
@@ -57,8 +57,14 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
+  short-function:
     handler: handler.hello
+    memorySize: 128
+    timeout: 3
+  long-function:
+    handler: handler.hello
+    memorySize: 256
+    timeout: 6
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
