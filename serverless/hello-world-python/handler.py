@@ -1,4 +1,5 @@
 import json
+import time
 
 
 def hello(event, context):
