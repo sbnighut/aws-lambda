@@ -17,6 +17,9 @@ sls deploy function -f hello
 **Check continuous logs :**
 sls logs -f hello -l 
 
+**Install sls plugin coomand**
+sls plugin install -n serverless-python-requirements
+
 **:**
 **:**
 **:**

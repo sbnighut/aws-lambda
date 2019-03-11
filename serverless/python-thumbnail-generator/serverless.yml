@@ -21,7 +21,7 @@ provider:
   name: aws
   runtime: python2.7
   region: us-east-1
-  profile: serverless-admin
+  profile: lambda-admin
   timeout: 10
   memorySize: 128
   iamRoleStatements:
@@ -33,15 +33,16 @@ provider:
      THUMBNAIL_SIZE: "128"
 
 custom:
-  bucket: s3-thumbnail-generator
+  bucket: swapnil-s3-thumbnail-generator
   pythonRequirements:
    dockerizePip: true
 
 functions:
   s3-thumbnail-generator:
-    handler: handler.s3_thumbnail_generator
+    handler: handler.generate_thumbnail
     events:
-      - s3:
+      - existingS3:
+      # - s3:
           bucket: ${self:custom.bucket}
           event: s3:ObjectCreated:*
           rules:
