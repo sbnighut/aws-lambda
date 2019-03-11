@@ -16,6 +16,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.Rproj
 
 # Serverless directories
 .serverless
+
